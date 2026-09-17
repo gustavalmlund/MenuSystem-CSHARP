@@ -1,14 +1,30 @@
-## .NET build output
+## Visual Studio and .NET build output
+.vs/
 bin/
 obj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
 
-## Visual Studio user-specific files
-.vs/
+## User-specific files
 *.user
 *.suo
+*.rsuser
+*.env
 
-## Rider user-specific files
+## IDE files
 .idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+## Packages and logs
+*.nupkg
+*.snupkg
+*.log
+packages/
 
 ## OS files
 .DS_Store
