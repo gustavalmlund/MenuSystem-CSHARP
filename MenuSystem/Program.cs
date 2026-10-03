@@ -4,14 +4,14 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        
+
         Menu mainMenu = new Menu("Min fantastiske menu");
         string[] menuNavne = ["Gør dit", "Gør dat", "Gør noget", "42"];
-       
+
         for (int i = 0; i < menuNavne.Length; i++)
         {
             mainMenu.AddMenuItem(menuNavne[i]);
-        }
+        } 
 
         do
         {

@@ -26,7 +26,7 @@ namespace MenuSystem
             {
                 Console.WriteLine($"{i+1}. {menuItems[i].Title}");
             }
-            Console.WriteLine("\n(Tryk menupunkt eller 0 for at afslutte)");
+            Console.WriteLine("\n(Skriv 0 for at afslutte)");
         }
 
         public void AddMenuItem(string menuTitle)
@@ -37,10 +37,11 @@ namespace MenuSystem
 
         public int SelectMenuItem()
         {
+            Console.Write($"\nVælg menupunkt (0-{itemCount}): ");
             int input = 0;
-            while (!int.TryParse(Console.ReadLine(), out input) || input < 0 || input > 4)
+            while (!int.TryParse(Console.ReadLine(), out input) || input < 0 || input > itemCount)
             {
-                Console.WriteLine("Du skal skrive et korrekt tal imellem 1-4 for at vælge en menu. Skriv 0 for at lukke menuen.");
+                Console.WriteLine($"Du skal skrive et korrekt tal imellem 1-{itemCount} for at vælge en menu. Skriv 0 for at lukke menuen.");
             }
             if (input == 0)
                 Environment.Exit(0);
